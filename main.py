@@ -1,3 +1,4 @@
+from replit import clear
 import random
 from hangman_words import word_list
 from hangman_art import logo
@@ -21,6 +22,7 @@ while end_of_game==False:
   #Check guessed letter
   while lives>0:
     guess = input("Guess a letter: ").lower()
+    clear()
     if guess in chosen_word:
       for i in range(0, len(chosen_word)):
         if chosen_word[i] == guess:
